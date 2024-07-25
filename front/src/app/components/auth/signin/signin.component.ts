@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { AuthService } from '../../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -11,14 +12,20 @@ import { AuthService } from '../../../services/auth.service';
   styleUrl: './signin.component.css'
 })
 export class SigninComponent {
+  public passwordsMatch: boolean = true;
+  public password: string = ''; 
+  public password2: string = ''; 
 
-  constructor (private authService:AuthService){
-
-  }
-  public onRegister(f:NgForm){
-    console.log(f.form.value);
-    this.authService.registerUser(f.form.value)
-  }
+  constructor (private authService:AuthService, private router:Router){
 }
 
+public onRegister(f:NgForm){
 
+
+}
+
+public checkPasswords(password: string, password2: string) {
+  this.passwordsMatch = (password === password2);
+}
+
+}

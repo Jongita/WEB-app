@@ -1,1 +1,26 @@
-<p>update-meal works!</p>
+<div class="card mt-3">
+    <div class="card-header">Edit event log</div>
+    <div class="card-body">
+        <form id="ngForm" (ngSubmit)="mealSubmit(f)" #f="ngForm">
+            <div class="mb-3">
+                <label for="" class="form-label">Pavadinimas</label>
+                <input type="text" class=" form-control" name="message" ngModel [(ngModel)]="name">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Aprašas</label>
+                <input type="text" class=" form-control" name="description" ngModel [(ngModel)]="description">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Kaina/label>
+                <input type="number" class="form-control" name="user_id" ngModel [(ngModel)]="price">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Nuotrauka</label>
+                <input type="text" class="form-control" name="image" ngModel [(ngModel)]="image>
+                <div class="mb-3">
+                    <label for="" class="form-label">Pavadinimas</label>
+                    <input type="text" class=" form-control" name="message" ngModel [(ngModel)]="name">
+                </div>
+    </div>
+</div>
+

@@ -1,0 +1,32 @@
+<div class="card mt-3">
+    <div class="card-header">Overview</div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nr.</th>
+                    <th>Pavadinimas</th>
+                    <th>Aprašymas</th>
+                    <th>Kaina</th>
+                    <th>Nuotrauka</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let meal of meals; let i=index;">
+                    <td>{{ i+1}}</td>
+                    <td>{{ meal.name }}</td>
+                    <td>{{ meal.description }}</td>
+                    <td>{{ meal.price }}</td>
+                    <td>{{ meal.image }}</td>
+                    <td>
+                        <a class="btn btn-outline-secondary">Edit</a>&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-outline-danger" (click)="deleteMeal(meal.id!)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

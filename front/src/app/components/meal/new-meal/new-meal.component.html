@@ -1,0 +1,28 @@
+<div class="card mt-3">
+    <div class="card-header">Prideti patiekala</div>
+    <div class="card-body">
+        <form id="ngForm" (ngSubmit)="mealSubmit(f)" #f="ngForm">
+            <h3>Infomacija apie patiekala</h3>
+            <div class="mb-3">
+                <label for="" class="form-label">Pavadinimas</label>
+                <input type="text" id="name" class="form-control" name="name" ngModel #inputdescription="ngModel">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Aprasymas</label>
+                <input type="text" class="form-control" name="description" value="" ngModel required pattern="[a-zA-Z ]*" maxlength="256" #inputdescription="ngModel">
+                
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Kaina</label>
+                <input type="number" class="form-control" name="price" value="" ngModel #inputprice="ngModel" pattern="[0-9]*">
+                
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Nuotrauka</label>
+                <input type="text" class="form-control" name="image" value="" ngModel pattern="[0-9]*" #inputimage="ngModel">
+            </div>
+            <button class="btn btn-success" type="submit" form="ngForm">Pridėti</button>
+        </form>
+    </div>
+</div>
+
